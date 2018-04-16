@@ -23,7 +23,11 @@ export class AppComponent {
   // Vamos a usar typecript
   status:boolean;
   //  esta es una variable que pondremos en nuestro templte
-  posts: object[]
+  posts: object[];
+  user = {
+    username:" ",
+    password:""
+  }
   constructor() {
     // aqui esta la data
     console.log()
@@ -36,6 +40,7 @@ export class AppComponent {
         { tite: 'post'},
         { tite: 'post'},
     ]
+ 
   }
   displayName() {
     return this.name
@@ -54,6 +59,8 @@ export class AppComponent {
     alert('oh La La')
   }
   onSubmit(theForm: NgForm){
-    console.log(theForm)
+    this.user.username = theForm.value.username;
+    this.user.password = theForm.value.password
+    console.log(this.user)
   }
 }

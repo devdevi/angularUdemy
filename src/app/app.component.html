@@ -4,12 +4,12 @@
   <!-- no action angular no need to refresh nothing -->
   <div class="form-group">
     <label for="username">Username</label>
-    <input name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email">
+    <input ngModel name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email">
     <small class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+    <input ngModel name="password" type="password" class="form-control" id="password" placeholder="Password">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
