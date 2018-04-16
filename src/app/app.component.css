@@ -4,6 +4,7 @@ css y archivo Typescript */
 span{
     color: royalblue;
     font-weight: 800;
+    display: inline-block;
 }
 .box{
     height: 200px;

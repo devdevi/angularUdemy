@@ -15,14 +15,23 @@ export class AppComponent {
   name = 'visaka';
   // string interpolation llevas las variables
   last = 'Devi'
+  lastName = ''
   city = 'Santiago Cl'
   // Vamos a usar typecript
   status:boolean;
   //  esta es una variable que pondremos en nuestro templte
+  posts: object[]
   constructor() {
     // aqui esta la data
     console.log()
     this.getUserStatus()
+    this.posts = [
+        { tite: 'post'},
+        { tite: 'post'},
+        { tite: 'post'},
+        { tite: 'post'},
+        { tite: 'post'},
+    ]
   }
   displayName() {
     return this.name

@@ -1,8 +1,43 @@
 <hr>
-<span>Event Binding part 1</span>
+<span>Loop Directive</span>
+<ul>
+  <li *ngFor="let i of posts; let j =index"> {{j + 1}} {{i.tite}}</li>
+  <!-- ngFor wassPerfectt i love it -->
+</ul>
+<hr>
+<hr>
+<span>Control structure Directives</span>
 <br>
+<h1 *ngIf="status; else notActive">{{name}}</h1>
+<!-- ngFor, ver la documentacion  -->
+<ng-template #notActive>
+  noActive</ng-template>
+<hr>
+
+<p>
+  What is the purpose of using modules in ES6?
+  <small>To help with code organization/isolation and logical grouping</small>
+</p>
+<p>Do we need to load FormsModule in order to use two-way data binding?
+  <b>yeSSS</b>
+</p>
+<hr>
+
+<span>Two way-Databinding</span>
+<br>
+<small>Write someting in the input XD:</small>
+<input type="text" [(ngModel)]="lastName"> {{lastName}}
+<br>
+<br>
+<hr>
+<span>Event Binding part 1</span>
+<p>What is the proper way of doing event binding?</p>
+<br>
+
 <!-- Dar eventos a los botones -->
-<button (click)='greatPerson()'><h2>Click</h2></button>
+<button (click)='greatPerson()'>
+  <h2>Click</h2>
+</button>
 <div (mouseover)='mousingOver()' class="box">
   <b>Don't Touch Me!</b>
 </div>
@@ -11,22 +46,21 @@
 <!-- You can do it this with all the events -->
 <hr>
 
-<span>Binding</span>
+<span> Propperty Binding</span>
+<p>What is the proper way of doing property binding?</p>
 <label for="status">Active</label>
-<input type="radio" name="" id="status" [checked]="status">
-{{getUserStatus()}}
+<input type="radio" name="" id="status" [checked]="status"> {{getUserStatus()}}
 <!-- [para hacer binding] -->
 <hr>
 <span>Interpolation string</span>
 <br>
 <h1>Welcome to app</h1>
-<span>Mi nombre es  {{name}} {{last}}</span>
+<span>Mi nombre es {{name}} {{last}}</span>
 <br>
 <hr>
 <!-- if city existe quiero ver esta ciudad si no existe estsa -->
 
-{{city  ? city : 'No city'}}
+{{city ? city : 'No city'}}
 <!--  if condicion -->
-<br>
-{{displayName()}}
+<br> {{displayName()}}
 <!-- Con tamplate string podemos invocar textos o metodos -->
