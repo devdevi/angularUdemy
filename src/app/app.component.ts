@@ -22,11 +22,16 @@ export class AppComponent {
   constructor() {
     // aqui esta la data
     console.log()
+    this.getUserStatus()
   }
   displayName() {
     return this.name
   }
   getUserStatus(){
-    this.status = true;
+    this.status = false;
+    // Cadavez que esta data cambia  se va a refleajar un el html
+  }
+  greatPerson(){
+    alert('Hi you are a Good Person')
   }
 }

@@ -1,6 +1,15 @@
+<hr>
+<span>Event Binding part 1</span>
+<!-- Dar eventos a los botones -->
+<button (click)='greatPerson()'><h2>Click</h2></button>
+<hr>
+<span>Binding</span>
 <label for="status">Active</label>
-<input type="radio" name="" id="status">
-
+<input type="radio" name="" id="status" [checked]="status">
+{{getUserStatus()}}
+<!-- [para hacer binding] -->
+<hr>
+<span>Interpolation string</span>
 <h1>Welcome to app</h1>
 <span>Mi nombre es  {{name}} {{last}}</span>
 <br>
