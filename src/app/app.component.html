@@ -3,7 +3,7 @@
 <span>Creating an HTML from with boostrap</span>
 <br>
 <code>npm i boostrap</code>
-<form>
+<form (ngSubmit)='onSubmit()'>
   <!-- no action agunlar no need to refresh nothing -->
   <div class="form-group">
     <label for="email">Email address</label>
@@ -58,7 +58,7 @@
 <span>Two way-Databinding</span>
 <br>
 <small>Write someting in the input XD:</small>
-<input type="text" [(ngModel)]="lastName"> {{lastName}}
+<!-- <input type="text" [(ngModel)]="lastName"> {{lastName}} -->
 <br>
 <br>
 <hr>

@@ -52,4 +52,8 @@ export class AppComponent {
   keyDowning(){
     alert('oh La La')
   }
+  onSubmit(){
+    alert('Enviando datos')
+    console.log('Enviando datos')
+  }
 }
