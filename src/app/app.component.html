@@ -1,8 +1,16 @@
 <hr>
 <span>Event Binding part 1</span>
+<br>
 <!-- Dar eventos a los botones -->
 <button (click)='greatPerson()'><h2>Click</h2></button>
+<div (mouseover)='mousingOver()' class="box">
+  <b>Don't Touch Me!</b>
+</div>
+<br>
+<input type="text" (keydown)='keyDowning()'>
+<!-- You can do it this with all the events -->
 <hr>
+
 <span>Binding</span>
 <label for="status">Active</label>
 <input type="radio" name="" id="status" [checked]="status">
@@ -10,6 +18,7 @@
 <!-- [para hacer binding] -->
 <hr>
 <span>Interpolation string</span>
+<br>
 <h1>Welcome to app</h1>
 <span>Mi nombre es  {{name}} {{last}}</span>
 <br>

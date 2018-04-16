@@ -34,4 +34,10 @@ export class AppComponent {
   greatPerson(){
     alert('Hi you are a Good Person')
   }
+  mousingOver(){
+    alert('Why you Touch me!')
+  }
+  keyDowning(){
+    alert('oh La La')
+  }
 }

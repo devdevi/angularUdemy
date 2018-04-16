@@ -1,8 +1,15 @@
-/*  Separar los componentes 
+/*  Separar los componentes
 entre templates
 css y archivo Typescript */
 span{
     color: royalblue;
     font-weight: 800;
-
+}
+.box{
+    height: 200px;
+    width: 300px;
+    border: 1px solid;
+    background-color: #000;
+    cursor: pointer;
+    color:White;
 }
