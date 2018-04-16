@@ -1,4 +1,16 @@
 <hr>
+<span>Class Directive</span>
+<h3 [ngClass]="{isActive: status}">{{lastName}}</h3>
+<!-- Activa la clase isActive si el status es TRUE -->
+<hr>
+<hr>
+<span>Styling Directive</span>
+<small>Operador Ternario</small>
+<h2 [ngStyle]="{color: status ? 'red' : 'green'}">{{name}}</h2>
+<!-- Si el estado es true que el color sea rojo y si no pues Verde -->
+
+<hr>
+<hr>
 <span>Loop Directive</span>
 <ul>
   <li *ngFor="let i of posts; let j =index"> {{j + 1}} {{i.tite}}</li>

@@ -14,3 +14,7 @@ span{
     cursor: pointer;
     color:White;
 }
+.isActive{
+    color: darkorange;
+    font-size: 18px;
+}

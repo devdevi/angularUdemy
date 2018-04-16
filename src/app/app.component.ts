@@ -12,10 +12,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mi Primera aplicacion';
-  name = 'visaka';
+  // firsName = prompt('Cual es tu nombre?')
+  // name = `${this.firsName}`;
+  name = 'Visaka';
   // string interpolation llevas las variables
   last = 'Devi'
-  lastName = ''
+  lastName :string;
   city = 'Santiago Cl'
   // Vamos a usar typecript
   status:boolean;
@@ -24,7 +26,8 @@ export class AppComponent {
   constructor() {
     // aqui esta la data
     console.log()
-    this.getUserStatus()
+    this.getUserStatus();
+    this.lastName ="Chavez"
     this.posts = [
         { tite: 'post'},
         { tite: 'post'},
@@ -37,7 +40,7 @@ export class AppComponent {
     return this.name
   }
   getUserStatus(){
-    this.status = false;
+    this.status = true;
     // Cadavez que esta data cambia  se va a refleajar un el html
   }
   greatPerson(){
