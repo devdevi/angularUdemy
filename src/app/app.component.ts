@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -52,8 +53,7 @@ export class AppComponent {
   keyDowning(){
     alert('oh La La')
   }
-  onSubmit(){
-    alert('Enviando datos')
-    console.log('Enviando datos')
+  onSubmit(theForm: NgForm){
+    console.log(theForm)
   }
 }
