@@ -1,0 +1,14 @@
+<label for="status">Active</label>
+<input type="radio" name="" id="status">
+
+<h1>Welcome to app</h1>
+<span>Mi nombre es  {{name}} {{last}}</span>
+<br>
+<hr>
+<!-- if city existe quiero ver esta ciudad si no existe estsa -->
+
+{{city  ? city : 'No city'}}
+<!--  if condicion -->
+<br>
+{{displayName()}}
+<!-- Con tamplate string podemos invocar textos o metodos -->
