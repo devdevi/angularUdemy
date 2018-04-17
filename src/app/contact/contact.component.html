@@ -1,1 +1,10 @@
 <h1>Contacto</h1>
+<form (ngSubmit)="onSubmit(thatForm)" #thatForm="ngForm">
+        <!-- no action angular no need to refresh nothing -->
+        <div class="form-group">
+                <label for="title">title</label>
+                <input ngModel name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter Title">
+                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>

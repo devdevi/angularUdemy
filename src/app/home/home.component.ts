@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     // ESTO ES UN CICLO DE VIDA
     this.http.get(`https://jsonplaceholder.typicode.com/posts`).subscribe(posts1 => {
       this.posts1 = posts1;
-      console.log(this.posts1)
+      // console.log(this.posts1)
     })
 
   }

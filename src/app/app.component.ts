@@ -20,47 +20,47 @@ export class AppComponent {
   name = 'Visaka';
   // string interpolation llevas las variables
   last = 'Devi'
-  lastName :string;
+  lastName: string;
   city = 'Santiago Cl'
   // Vamos a usar typecript
-  status:boolean;
+  status: boolean;
   //  esta es una variable que pondremos en nuestro templte
   posts: object[];
   user = {
-    username:" ",
-    password:""
+    username: " ",
+    password: ""
   }
   constructor() {
     // aqui esta la data
     console.log()
     this.getUserStatus();
-    this.lastName ="Chavez"
+    this.lastName = "Chavez"
     this.posts = [
-        { tite: 'post'},
-        { tite: 'post'},
-        { tite: 'post'},
-        { tite: 'post'},
-        { tite: 'post'},
+      { tite: 'post' },
+      { tite: 'post' },
+      { tite: 'post' },
+      { tite: 'post' },
+      { tite: 'post' },
     ]
- 
+
   }
   displayName() {
     return this.name
   }
-  getUserStatus(){
+  getUserStatus() {
     this.status = true;
     // Cadavez que esta data cambia  se va a refleajar un el html
   }
-  greatPerson(){
+  greatPerson() {
     alert('Hi you are a Good Person')
   }
-  mousingOver(){
+  mousingOver() {
     alert('Why you Touch me!')
   }
-  keyDowning(){
+  keyDowning() {
     alert('oh La La')
   }
-  onSubmit(theForm: NgForm){
+  onSubmit(theForm: NgForm) {
     this.user.username = theForm.value.username;
     this.user.password = theForm.value.password
     console.log(this.user);
