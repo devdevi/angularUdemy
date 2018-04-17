@@ -1,70 +1,11 @@
-
-<span>Converting HTML from to an Object</span>
-<form (ngSubmit)="onSubmit(theForm)" #theForm="ngForm">
-  <!-- no action angular no need to refresh nothing -->
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input ngModel name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email">
-    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input ngModel name="password" type="password" class="form-control" id="password" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<hr>
-<span>Creating an HTML from with boostrap</span>
-<br>
-<code>npm i boostrap</code>
-<form (ngSubmit)='onSubmit()'>
-  <!-- no action agunlar no need to refresh nothing -->
-  <!-- <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form> -->
-  <hr>
-
-  <hr>
-  <span>Class Directive</span>
-  <h3 [ngClass]="{isActive: status}">{{lastName}}</h3>
-  <!-- Activa la clase isActive si el status es TRUE -->
-  <hr>
-  <hr>
-  <span>Styling Directive</span>
-  <small>Operador Ternario</small>
-  <h2 [ngStyle]="{color: status ? 'red' : 'green'}">{{name}}</h2>
-  <!-- Si el estado es true que el color sea rojo y si no pues Verde -->
-
-  <hr>
-  <hr>
-  <span>Loop Directive</span>
-  <ul>
-    <li *ngFor="let i of posts; let j =index"> {{j + 1}} {{i.tite}}</li>
-    <!-- ngFor wassPerfectt i love it -->
-  </ul>
-  <hr>
-  <hr>
-  <span>Control structure Directives</span>
-  <br>
-  <h1 *ngIf="status; else notActive">{{name}}</h1>
-  <!-- ngFor, ver la documentacion  -->
-  <ng-template #notActive>
-    noActive</ng-template>
-  <hr>
-
-  <p>
-    What is the purpose of using modules in ES6?
-    <small>To help with code organization/isolation and logical grouping</small>
-  </p>
-  <p>Do we need to load FormsModule in order to use two-way data binding?
-    <b>yeSSS</b>
-  </p>
-  <hr>
+<table class="table table-dark">
+  <!-- usando la data de la api -->
+    <tbody>
+      <tr *ngFor="let pot of posts1">
+        <th scope="row">1</th>
+        <td>{{pot.userId}}</td>
+        <td>{{pot.id}}</td>
+        <td>{{pot.title}}</td>
+      </tr>
+    </tbody>
+  </table>
