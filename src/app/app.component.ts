@@ -10,6 +10,8 @@ import { NgForm } from '@angular/forms'
   styleUrls: ['./app.component.css']
   // pasa lo mismo que el los templates
   // Podemos escribir  styles: y escribir ahi mismo los stylos o hacer refencia a algun lugar donde se encuentran
+
+
 })
 export class AppComponent {
   title = 'Mi Primera aplicacion';
