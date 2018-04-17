@@ -1,112 +1,26 @@
-<hr>
-<span>Converting HTML from to an Object</span>
-<form (ngSubmit)="onSubmit(theForm)" #theForm="ngForm">
-  <!-- no action angular no need to refresh nothing -->
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input ngModel name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email">
-    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input ngModel name="password" type="password" class="form-control" id="password" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<hr>
-<span>Creating an HTML from with boostrap</span>
-<br>
-<code>npm i boostrap</code>
-<form (ngSubmit)='onSubmit()'>
-  <!-- no action agunlar no need to refresh nothing -->
-  <!-- <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form> -->
-<hr>
-
-<hr>
-<span>Class Directive</span>
-<h3 [ngClass]="{isActive: status}">{{lastName}}</h3>
-<!-- Activa la clase isActive si el status es TRUE -->
-<hr>
-<hr>
-<span>Styling Directive</span>
-<small>Operador Ternario</small>
-<h2 [ngStyle]="{color: status ? 'red' : 'green'}">{{name}}</h2>
-<!-- Si el estado es true que el color sea rojo y si no pues Verde -->
-
-<hr>
-<hr>
-<span>Loop Directive</span>
-<ul>
-  <li *ngFor="let i of posts; let j =index"> {{j + 1}} {{i.tite}}</li>
-  <!-- ngFor wassPerfectt i love it -->
-</ul>
-<hr>
-<hr>
-<span>Control structure Directives</span>
-<br>
-<h1 *ngIf="status; else notActive">{{name}}</h1>
-<!-- ngFor, ver la documentacion  -->
-<ng-template #notActive>
-  noActive</ng-template>
-<hr>
-
-<p>
-  What is the purpose of using modules in ES6?
-  <small>To help with code organization/isolation and logical grouping</small>
-</p>
-<p>Do we need to load FormsModule in order to use two-way data binding?
-  <b>yeSSS</b>
-</p>
-<hr>
-
-<span>Two way-Databinding</span>
-<br>
-<small>Write someting in the input XD:</small>
-<!-- <input type="text" [(ngModel)]="lastName"> {{lastName}} -->
-<br>
-<br>
-<hr>
-<span>Event Binding part 1</span>
-<p>What is the proper way of doing event binding?</p>
-<br>
-
-<!-- Dar eventos a los botones -->
-<button (click)='greatPerson()'>
-  <h2>Click</h2>
-</button>
-<div (mouseover)='mousingOver()' class="box">
-  <b>Don't Touch Me!</b>
+<span>
+  Routing system /Navigation</span>
+<p>With angular we know that don'n have to refresh a navigator</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" >Contact</a>
+          <!-- Cambiamos el atributo href por routerLink -->
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div class="container">
+  <router-outlet></router-outlet>
 </div>
-<br>
-<input type="text" (keydown)='keyDowning()'>
-<!-- You can do it this with all the events -->
-<hr>
-
-<span> Propperty Binding</span>
-<p>What is the proper way of doing property binding?</p>
-<label for="status">Active</label>
-<input type="radio" name="" id="status" [checked]="status"> {{getUserStatus()}}
-<!-- [para hacer binding] -->
-<hr>
-<span>Interpolation string</span>
-<br>
-<h1>Welcome to app</h1>
-<span>Mi nombre es {{name}} {{last}}</span>
-<br>
-<hr>
-<!-- if city existe quiero ver esta ciudad si no existe estsa -->
-
-{{city ? city : 'No city'}}
-<!--  if condicion -->
-<br> {{displayName()}}
-<!-- Con tamplate string podemos invocar textos o metodos -->

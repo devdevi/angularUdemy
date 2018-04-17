@@ -61,6 +61,10 @@ export class AppComponent {
   onSubmit(theForm: NgForm){
     this.user.username = theForm.value.username;
     this.user.password = theForm.value.password
-    console.log(this.user)
+    console.log(this.user);
+
+    // this.http.get('/post', this.user)
   }
+
+
 }
